@@ -1,0 +1,22 @@
+{
+  "name": "dry-run-demo-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:frontend": "npm --prefix packages/frontend run dev",
+    "start:service-dialog-a": "node packages/service-dialog-a/index.js",
+    "start:service-dialog-b": "node packages/service-dialog-b/index.js",
+    "start:all": "concurrently \"npm run start:frontend\" \"npm run start:service-dialog-a\" \"npm run start:service-dialog-b\""
+  },
+  "keywords": [],
+  "description": "Monorepo with React frontend and two Node.js microservices",
+  "author": "Prabu",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
