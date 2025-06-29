@@ -1,6 +1,22 @@
 # dry-run-demo-app
 
-![Project Image](./dryrun-demo-app.jpeg) <!-- Replace with your actual image path -->
+## 🖼️ Screenshots
+
+### ✅ Planned UI Design
+
+![Planned Design](./dryrun-demo-app.jpeg)  
+*Initial mockup for `dry-run-demo-app`*
+
+---
+
+### Actual App Output
+
+![App Output](./app-output.png)  
+*Live UI showing dialog buttons and styled portal layout*
+
+### Actual App Output - Dialog Interaction
+
+![App Output](./app-output-dialog.png)  
 
 ## Overview
 
@@ -37,7 +53,7 @@
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
+   git clone git@github.com:ramachandraprabu/dry-run-demo-app.git
    cd dry-run-demo-app
 
 2. **Install root dependencies**
@@ -65,7 +81,3 @@
 
     ```bash
     npm run start:all
-
-
-
-
