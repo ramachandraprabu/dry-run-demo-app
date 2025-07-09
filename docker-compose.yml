@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  service-a:
+    build:
+      context: ./packages/service-dialog-a
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+
+  service-b:
+    build:
+      context: ./packages/service-dialog-b
+    ports:
+      - "3002:3002"
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./packages/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - service-a
+      - service-b
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
