@@ -1,22 +1,30 @@
 {
-  "name": "dry-run-demo-app",
+  "name": "monorepo",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "NPM monorepo example",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:frontend": "npm --prefix packages/frontend run dev",
-    "start:service-dialog-a": "node packages/service-dialog-a/index.js",
-    "start:service-dialog-b": "node packages/service-dialog-b/index.js",
-    "start:all": "concurrently \"npm run start:frontend\" \"npm run start:service-dialog-a\" \"npm run start:service-dialog-b\""
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:service-a": "npm run dev --workspace=service-dialog-a",
+    "dev:service-b": "npm run dev --workspace=service-dialog-b",
+    "dev:all": "concurrently \"npm run dev:frontend\" \"npm run dev:service-a\" \"npm run dev:service-b\""
   },
-  "keywords": [],
-  "description": "Monorepo with React frontend and two Node.js microservices",
-  "author": "Prabu",
+  "keywords": [
+    "react",
+    "monorepo",
+    "workspace"
+  ],
+  "author": "Quantum Strides",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^9.2.0"
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "concurrently": "^9.2.0"
   }
 }
