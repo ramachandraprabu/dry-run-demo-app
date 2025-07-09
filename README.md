@@ -83,3 +83,11 @@ _Live UI showing dialog buttons and styled portal layout_
    ```bash
    npm run start:all
    ```
+
+
+### To run the docker 
+```sh
+docker compose up -d
+```
+
+Then access using `http://localhost:80`
